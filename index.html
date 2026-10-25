@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08111f">
+  <title>NetSpeed — Internet Speed Test</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="app">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="NetSpeed home">
+        <span class="brand-icon" aria-hidden="true">↗</span>
+        <span>Net<span class="brand-accent">Speed</span></span>
+      </a>
+
+      <button
+        class="theme-button"
+        id="themeButton"
+        type="button"
+        aria-label="Switch color theme"
+        title="Switch color theme"
+      >
+        <span id="themeIcon" aria-hidden="true">☀</span>
+      </button>
+    </header>
+
+    <section class="hero" aria-labelledby="pageTitle">
+      <p class="eyebrow"><span class="live-dot"></span> INTERNET PERFORMANCE</p>
+      <h1 id="pageTitle">Your connection,<br><span>measured.</span></h1>
+      <p class="subtitle">
+        Check your network performance with a quick browser-based test.
+      </p>
+    </section>
+
+    <section class="test-card" aria-label="Internet speed test">
+      <div class="card-heading">
+        <div>
+          <p class="section-label">CURRENT SESSION</p>
+          <p class="server-info">
+            <span class="server-dot"></span>
+            Test server <strong>Cloudflare</strong>
+          </p>
+        </div>
+        <span class="secure-label">● READY</span>
+      </div>
+
+      <div class="speedometer" id="speedometer">
+        <div class="speedometer-inner">
+          <span class="speed-label">DOWNLOAD</span>
+          <div class="speed-value">
+            <span id="speedValue">--</span>
+          </div>
+          <span class="speed-unit">Mbps</span>
+        </div>
+      </div>
+
+      <div class="metrics">
+        <div class="metric">
+          <span class="metric-icon ping-icon" aria-hidden="true">↔</span>
+          <div>
+            <span class="metric-label">PING</span>
+            <p class="metric-value" id="ping">-- <small>ms</small></p>
+          </div>
+        </div>
+
+        <div class="metric-divider"></div>
+
+        <div class="metric">
+          <span class="metric-icon download-icon" aria-hidden="true">↓</span>
+          <div>
+            <span class="metric-label">DOWNLOAD</span>
+            <p class="metric-value" id="download">-- <small>Mbps</small></p>
+          </div>
+        </div>
+
+        <div class="metric-divider"></div>
+
+        <div class="metric">
+          <span class="metric-icon upload-icon" aria-hidden="true">↑</span>
+          <div>
+            <span class="metric-label">UPLOAD</span>
+            <p class="metric-value" id="upload">-- <small>Mbps</small></p>
+          </div>
+        </div>
+      </div>
+
+      <button class="start-button" id="startButton" type="button">
+        <span id="buttonText">Start speed test</span>
+        <span class="button-arrow" aria-hidden="true">→</span>
+      </button>
+
+      <p class="status" id="status" aria-live="polite">
+        Ready to check your connection.
+      </p>
+    </section>
+
+    <section class="history-section" aria-labelledby="historyTitle">
+      <div class="history-heading">
+        <div>
+          <p class="section-label">YOUR RECENT RESULTS</p>
+          <h2 id="historyTitle">Test history</h2>
+        </div>
+        <button class="clear-button" id="clearHistoryButton" type="button">
+          Clear history
+        </button>
+      </div>
+
+      <div class="history-list" id="historyList">
+        <p class="empty-history" id="emptyHistory">
+          Your completed tests will appear here.
+        </p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>NetSpeed</span>
+      <span>Results are estimates and may vary with network conditions.</span>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
